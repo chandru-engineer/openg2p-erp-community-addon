@@ -6,7 +6,7 @@ odoo_versions = ['9.0', '10.0', '11.0', '12.0', '13.0', '14.0', '15.0', '16.0', 
 
 def append_file(module_name, upgradable, index):
     with open("./README.md", "a") as readme:
-        readme.write(f"{index}. [{module_name}]({module_name}/) | ")
+        readme.write(f"{index} | [{module_name}]({module_name}/) | ")
         for odoo_version in odoo_versions:
             supported, link = check_upgrade(module_name, odoo_version)
             if supported == "true":
